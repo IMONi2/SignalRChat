@@ -1,0 +1,103 @@
+:root {
+    --color-bg-general: #ebf8ff;
+    --color-header-general: #bee3f8;
+    --color-bg-teacher: #fefcbf;
+    --color-header-teacher: #faf089;
+    --color-btn-general: #4299e1;
+    --color-btn-teacher: #d69e2e;
+    --color-btn-hover: #2b6cb0;
+}
+
+.chat-container {
+    display: flex;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.chat-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.chat-header {
+    padding: 8px;
+    font-weight: 600;
+    text-align: center;
+}
+
+    .chat-header.teacher::before {
+        content: "Teacher Announcements";
+    }
+
+.chat-messages {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+
+.chat-input-area {
+    display: flex;
+    gap: 8px;
+    padding: 8px;
+    background-color: #fff;
+    border-top: 1px solid #e2e8f0;
+}
+
+    .chat-input-area input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #cbd5e0;
+        border-radius: 4px;
+    }
+
+
+.chat-box.chat-general {
+    background-color: var(--color-bg-general);
+}
+
+    .chat-box.chat-general .chat-header {
+        background-color: var(--color-header-general);
+    }
+
+.chat-box.chat-teacher {
+    background-color: var(--color-bg-teacher);
+}
+
+    .chat-box.chat-teacher .chat-header {
+        background-color: var(--color-header-teacher);
+    }
+
+.btn-general {
+    background-color: var(--color-btn-general);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+    .btn-general:hover {
+        background-color: var(--color-btn-hover);
+    }
+
+.btn-teacher {
+    background-color: var(--color-btn-teacher);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+    .btn-teacher:hover {
+        background-color: var(--color-btn-hover);
+    }
+
+.teacher-chat-hidden-button {
+    display: none;
+}
